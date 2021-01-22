@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script src="./echarts.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width:100%;height:800px;">
+    </div>
+    <script>
+        var myChart = echarts.init(document.getElementById('main'), 'dark');
+        myChart.showLoading();
+        //$.getJSON('./ziyuan.json', function(graph) {
+        var graph = {
+            "nodes": [{
+                "id": "0",
+                "name": "库淑兰",
+                "symbolSize": 50,
+                "category": "库淑兰",
+                "value": 900
+            }, {
+                "id": "1",
+                "name": "魏伊平",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "2",
+                "name": "周喜莲",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "3",
+                "name": "何爱叶",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "4",
+                "name": "罗洁",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "5",
+                "name": "罗雪清",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "6",
+                "name": "连芳霞",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "7",
+                "name": "孙惠娥",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "8",
+                "name": "吴巧玲",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "9",
+                "name": "李玲",
+                "symbolSize": 30,
+                "category": "库淑兰",
+            }, {
+                "id": "10",
+                "name": "高金爱",
+                "symbolSize": 50,
+                "category": "高金爱",
+            }, {
+                "id": "11",
+                "name": "王西安",
+                "symbolSize": 30,
+                "category": "高金爱",
+            }, {
+                "id": "12",
+                "name": "李福爱",
+                "symbolSize": 30,
+                "category": "高金爱",
+            }, {
+                "id": "13",
+                "name": "孙佃珍",
+                "symbolSize": 30,
+                "category": "高金爱",
+            }, {
+                "id": "14",
+                "name": "王朝辉",
+                "symbolSize": 30,
+                "category": "高金爱",
+            }, {
+                "id": "15",
+                "name": "李淑琴",
+                "symbolSize": 30,
+                "category": "高金爱",
+            }, {
+                "id": "16",
+                "name": "余泽玲",
+                "symbolSize": 40,
+                "category": "余泽玲"
+            }, {
+                "id": "17",
+                "name": "王朝辉老师",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "18",
+                "name": "韩树爱丈夫的侄女",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "19",
+                "name": "韩树叶师傅",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "20",
+                "name": "余梅的三姑",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "21",
+                "name": "李园园老师",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "22",
+                "name": "韩志艳姐姐",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "23",
+                "name": "柴占芳姨姨",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "24",
+                "name": "余琴姐姐",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "25",
+                "name": "刘宇萌老师",
+                "symbolSize": 30,
+                "category": "余泽玲"
+            }, {
+                "id": "26",
+                "name": "何爱叶",
+                "symbolSize": 40,
+                "category": "何爱叶"
+            }, {
+                "id": "27",
+                "name": "来红梅老师",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "28",
+                "name": "赵秀芹老师",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "29",
+                "name": "罗洁母亲",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "30",
+                "name": "罗雪清母亲",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "31",
+                "name": "王邈老师",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "32",
+                "name": "张华老师",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "33",
+                "name": "焦转华老师",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "34",
+                "name": "李伟珍",
+                "symbolSize": 30,
+                "category": "何爱叶"
+            }, {
+                "id": "35",
+                "name": "李秀芳",
+                "category": 40,
+                "category": "李秀芳"
+            }, {
+                "id": "36",
+                "name": "王朝辉老师",
+                "symbolSize": 30,
+                "category": "李秀芳",
+            }, {
+                "id": "37",
+                "name": "韩树爱丈夫的侄女",
+                "symbolSize": 30,
+                "category": "李秀芳",
+            }, {
+                "id": "38",
+                "name": "韩树叶师傅",
+                "symbolSize": 30,
+                "category": "李秀芳",
+            }, {
+                "id": "39",
+                "name": "余梅的三姑",
+                "symbolSize": 30,
+                "category": "李秀芳",
+            }, {
+                "id": "40",
+                "name": "李园园老师",
+                "symbolSize": 30,
+                "category": "李秀芳",
+            }, {
+                "id": "41",
+                "name": "韩志艳姐姐",
+                "symbolSize": 30,
+                "category": "李秀芳",
+            }, {
+                "id": "100",
+                "name": "薛玉琴",
+                "symbolSize": "30",
+                "category": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "id": "101",
+                "name": "白凤兰",
+                "symbolSize": "30",
+                "category": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "id": "102",
+                "name": "朱光莲",
+                "symbolSize": "30",
+                "category": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "id": "103",
+                "name": "常振芳",
+                "symbolSize": "30",
+                "category": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "id": "104",
+                "name": "曹佃祥",
+                "symbolSize": "30",
+                "category": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "id": "105",
+                "name": "郝桂珍",
+                "symbolSize": "30",
+                "category": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "id": "106",
+                "name": "王占兰",
+                "symbolSize": "30",
+                "category": "/"
+            }, {
+                "id": "107",
+                "name": "李桂莲",
+                "symbolSize": "30",
+                "category": "/"
+            }, {
+                "id": "108",
+                "name": "袁凤云",
+                "symbolSize": "30",
+                "category": "库淑兰弟子的老师"
+            }, {
+                "id": "109",
+                "name": "田小会",
+                "symbolSize": "30",
+                "category": "库淑兰弟子的老师"
+            }, {
+                "id": "110",
+                "name": "潘英珍",
+                "symbolSize": "30",
+                "category": "库淑兰弟子的老师"
+            }, {
+                "id": "11_1",
+                "name": "徐瑛",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "12_1",
+                "name": "刘心莲",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "12_2",
+                "name": "陈莲莲",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "12_3",
+                "name": "王红梅",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "12_4",
+                "name": "李亚玲",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "13_1",
+                "name": "刘宇佳",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "13_2",
+                "name": "李小艳",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "13_3",
+                "name": "孙毛燕",
+                "symbolSize": "15",
+                "category": "高金爱隔代弟子"
+            }, {
+                "id": "104_1",
+                "name": "白库女",
+                "symbolSize": "30",
+                "category": "高金爱的共享弟子"
+            }, {
+                "id": "105_1",
+                "name": "陈红梅",
+                "symbolSize": "30",
+                "category": "高金爱的共享弟子"
+            }, {
+                "id": "106_1",
+                "name": "郭爱梅",
+                "symbolSize": "30",
+                "category": "/"
+            }, {
+                "id": "2_1",
+                "name": "李海玲",
+                "symbolSize": "30",
+                "category": "库淑兰弟子的老师"
+            }],
+            "links": [{
+                "source": "0",
+                "target": "1"
+            }, {
+                "source": "0",
+                "target": "2"
+            }, {
+                "source": "0",
+                "target": "3"
+            }, {
+                "source": "0",
+                "target": "4"
+            }, {
+                "source": "0",
+                "target": "5"
+            }, {
+                "source": "0",
+                "target": "6"
+            }, {
+                "source": "0",
+                "target": "7"
+            }, {
+                "source": "0",
+                "target": "8"
+            }, {
+                "source": "0",
+                "target": "9"
+            }, {
+                "source": "10",
+                "target": "11"
+            }, {
+                "source": "10",
+                "target": "12"
+            }, {
+                "source": "10",
+                "target": "13"
+            }, {
+                "source": "10",
+                "target": "14"
+            }, {
+                "source": "10",
+                "target": "15"
+            }, {
+                "source": "16",
+                "target": "17"
+            }, {
+                "source": "16",
+                "target": "18"
+            }, {
+                "source": "16",
+                "target": "19"
+            }, {
+                "source": "16",
+                "target": "20"
+            }, {
+                "source": "16",
+                "target": "21"
+            }, {
+                "source": "16",
+                "target": "22"
+            }, {
+                "source": "16",
+                "target": "23"
+            }, {
+                "source": "16",
+                "target": "24"
+            }, {
+                "source": "16",
+                "target": "25"
+            }, {
+                "source": "26",
+                "target": "27"
+            }, {
+                "source": "26",
+                "target": "28"
+            }, {
+                "source": "26",
+                "target": "29"
+            }, {
+                "source": "26",
+                "target": "30"
+            }, {
+                "source": "26",
+                "target": "31"
+            }, {
+                "source": "26",
+                "target": "32"
+            }, {
+                "source": "26",
+                "target": "33"
+            }, {
+                "source": "26",
+                "target": "34"
+            }, {
+                "source": "35",
+                "target": "36"
+            }, {
+                "source": "35",
+                "target": "37"
+            }, {
+                "source": "35",
+                "target": "38"
+            }, {
+                "source": "35",
+                "target": "39"
+            }, {
+                "source": "35",
+                "target": "40"
+            }, {
+                "source": "35",
+                "target": "41"
+            }, {
+                "source": "108",
+                "target": "1"
+            }, {
+                "source": "2",
+                "target": "2_1"
+            }, {
+                "source": "6",
+                "target": "33"
+            }, {
+                "source": "8",
+                "target": "33"
+            }, {
+                "source": "9",
+                "target": "32"
+            }, {
+                "source": "9",
+                "target": "31"
+            }, {
+                "source": "9",
+                "target": "2_1"
+            }, {
+                "source": "109",
+                "target": "31"
+            }, {
+                "source": "110",
+                "target": "31"
+            }, {
+                "source": "100",
+                "target": "31"
+            }, {
+                "source": "11",
+                "target": "11_1"
+            }, {
+                "source": "12",
+                "target": "12_1"
+            }, {
+                "source": "12",
+                "target": "12_2"
+            }, {
+                "source": "12",
+                "target": "12_3"
+            }, {
+                "source": "12",
+                "target": "12_4"
+            }, {
+                "source": "13",
+                "target": "13_1"
+            }, {
+                "source": "13",
+                "target": "13_2"
+            }, {
+                "source": "13",
+                "target": "13_3"
+            }, {
+                "source": "101",
+                "target": "12_3"
+            }, {
+                "source": "104",
+                "target": "104_1"
+            }, {
+                "source": "103",
+                "target": "14"
+            }, {
+                "source": "102",
+                "target": "13_3"
+            }, {
+                "source": "104",
+                "target": "11"
+            }, {
+                "source": "105",
+                "target": "13_2"
+            }, {
+                "source": "105",
+                "target": "22"
+            }, {
+                "source": "105",
+                "target": "105_1"
+            }, {
+                "source": "106",
+                "target": "106_1"
+            }, {
+                "source": "106",
+                "target": "16"
+            }, {
+                "source": "35",
+                "target": "19"
+            }, {
+                "source": "107",
+                "target": "39"
+            }],
+            "categories": [{
+                "name": "库淑兰"
+            }, {
+                "name": "高金爱"
+            }, {
+                "name": "余泽玲"
+            }, {
+                "name": "何爱叶"
+            }, {
+                "name": "李秀芳"
+            }, {
+                "name": "/"
+            }, {
+                "name": "高金爱弟子及隔代弟子的老师"
+            }, {
+                "name": "库淑兰弟子的老师"
+            }, {
+                "name": "高金爱的共享弟子"
+            }, {
+                "name": "库淑兰弟子的老师"
+            }, {
+                "name": "高金爱隔代弟子"
+            }]
+        }
+        myChart.hideLoading();
+
+        graph.nodes.forEach(function(node) {
+            node.label = {
+                show: node.symbolSize > 30
+            };
+
+        });
+
+        option = {
+            title: {
+                text: '陕西剪纸数据库',
+                subtext: 'Default layout',
+                top: 'bottom',
+                left: 'right'
+            },
+            tooltip: {},
+            legend: [{
+                // selectedMode: 'single',
+                //map返回一个新的数组
+                //返回categories的每个name值
+                data: graph.categories.map(function(a) {
+                    return a.name;
+                })
+            }],
+            //动画出现时间
+            animationDuration: 4000,
+            animationEasingUpdate: 'quinticInOut',
+            series: [{
+                name: 'Les Miserables',
+                type: 'graph',
+                //是否用x,y布局，circular采用环形布局// force采用力引导布局
+                layout: 'circular',
+                //数据
+                data: graph.nodes,
+                //联系
+                links: graph.links,
+                //节点分类的类目
+                categories: graph.categories,
+                //是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+                roam: true,
+                //图形上的文本标签
+                label: {
+                    //标签位置
+                    position: 'right',
+                    //
+                    //formatter: '{b}'
+                },
+                //关系边的公用线条样式。
+                lineStyle: {
+                    //会自动取源节点或目标节点的颜色作为自己的颜色
+                    color: 'source',
+                    //连接线的曲度
+                    curveness: 0.5
+                },
+                emphasis: {
+                    //聚焦关系图中的邻接点和边的图形
+                    focus: 'adjacency',
+                    lineStyle: {
+                        //线宽
+                        width: 10
+                    }
+                }
+            }]
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
